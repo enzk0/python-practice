@@ -27,8 +27,8 @@ class Test_todomanager(unittest.TestCase):
         todo_mgr.removeTask(task1)
         todo_mgr.removeTask(task2)
         
-        self.assertNotIn(task1.description, todo_mgr.tasks[0].description, "It is in the list")
-        self.assertNotIn(task2.description, todo_mgr.tasks[1].description, "It is in the list")
+        self.assertNotIn(task1, todo_mgr.tasks, "It is in the list")
+        self.assertNotIn(task2, todo_mgr.tasks, "It is in the list")
  
 
 if __name__ == '__main__':
