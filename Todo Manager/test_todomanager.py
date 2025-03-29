@@ -21,11 +21,11 @@ class Test_todomanager(unittest.TestCase):
         
         todo_mgr = TodoManager()
         
-        todo_mgr.tasks.append(task1)
-        todo_mgr.tasks.append(task2)
+        todo_mgr.addTask(task1)
+        todo_mgr.addTask(task2)
                
-        todo_mgr.tasks.removeTask("Do the dishes.")
-        todo_mgr.tasks.removeTask("Do the laundry.")
+        todo_mgr.removeTask(task1)
+        todo_mgr.removeTask(task2)
         
         self.assertNotIn(task1.description, todo_mgr.tasks[0].description, "It is in the list")
  
