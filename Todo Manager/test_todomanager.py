@@ -9,8 +9,8 @@ class Test_todomanager(unittest.TestCase):
         
         todo_mgr = TodoManager()
         
-        todo_mgr.tasks.append(task1)
-        todo_mgr.tasks.append(task2)
+        todo_mgr.addTask(task1)
+        todo_mgr.addTask(task2)
                
         self.assertEqual(todo_mgr.tasks[0].description, "Do the dishes.")
         self.assertEqual(todo_mgr.tasks[1].description, "Do the laundry.")
